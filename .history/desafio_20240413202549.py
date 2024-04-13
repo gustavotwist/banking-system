@@ -46,22 +46,22 @@ while True:
             print("Operação falhou! Número  Máximo de saques foi excedido.")      
         
         elif valor > 0:
-            saldo -= valor
-            extrato += f'Saque: R$ {valor: .2f}\n' 
-            numero_saques += 1
+            saldo -= valorextrato += f'Saque: R$ {valor: .2f}\n' 
         
-        else:
-            print("Operação falhou! O valor informado é inválido.")  
+        numero_saques += 1
         
-    elif opcao == "e": 
+    else:
+        print("Operação falhou! O valor informado é inválido.")  
+        
+    if opcao == "e":
+        
         print("\n==========EXTRATO==========")    
         print("Não foram realizadas movimentações." if not extrato else extrato)      
         print(f"\nSaldo: R$ {saldo: .2f}")  
         print("===============================") 
         
-    elif opcao == "q":
-        break
+    elif opcao =="q":
+          break
           
     else:
         print("Operação inválida, por favor selecione novamente a operação desejada.")        
-        

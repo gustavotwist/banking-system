@@ -25,9 +25,10 @@ while True:
             extrato += f'Deposito: R$ {valor: .2f}\n'
             
         else:
-            print("Operação falhou! O valor informado é inválido. Tente novamente!")    
+          print("Operação falhou! O valor informado é inválido. Tente novamente!")    
           
-    elif opcao == 's':
+    if opcao == 's':
+        
         valor = float(input("Informe o valor do saque: "))   
         
         excedeu_saldo = valor > saldo
@@ -36,32 +37,34 @@ while True:
         
         excedeu_saques = numero_saques >= LIMITE_SAQUES  
         
-        if excedeu_saldo:
-            print("Operação falhou! Voçê não possui saldo suficiente.")   
+    if excedeu_saldo:
+        print("Operação falhou! Voçê não possui saldo suficiente.")   
                   
-        elif excedeu_limite:
-            print("Operação falhou! O valor do saque excedeu o limite.")  
+    elif excedeu_limite:
+        print("Operação falhou! O valor do saque excedeu o limite.")  
         
-        elif excedeu_saques:
-            print("Operação falhou! Número  Máximo de saques foi excedido.")      
+    elif excedeu_saques:
+        print("Operação falhou! Número de saques foi excedido.")      
         
-        elif valor > 0:
-            saldo -= valor
-            extrato += f'Saque: R$ {valor: .2f}\n' 
-            numero_saques += 1
+    elif valor > 0:
+        saldo -= valor
         
-        else:
-            print("Operação falhou! O valor informado é inválido.")  
+        extrato += f'Saque: R$ {valor: .2f}\n' 
         
-    elif opcao == "e": 
+        numero_saques += 1
+        
+    else:
+        print("Operação falhou! O valor informado é inválido.")  
+        
+    if opcao == "e":
+        
         print("\n==========EXTRATO==========")    
         print("Não foram realizadas movimentações." if not extrato else extrato)      
         print(f"\nSaldo: R$ {saldo: .2f}")  
         print("===============================") 
         
-    elif opcao == "q":
-        break
+    elif opcao =="q":
+          break
           
     else:
         print("Operação inválida, por favor selecione novamente a operação desejada.")        
-        

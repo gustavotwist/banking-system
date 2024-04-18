@@ -101,7 +101,6 @@ def listar_contas(contas):
         """
         print("=" * 100)
         print(textwrap.dedent(linha))        
-
     
 def main():
     LIMITE_SAQUES = 3

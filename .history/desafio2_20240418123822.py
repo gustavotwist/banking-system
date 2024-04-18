@@ -97,11 +97,8 @@ def listar_contas(contas):
         linha = f"""\
             Agência:\t{conta['agencia']}
             C/C:\t\t{conta['numero_conta']}
-            Titular:\t{conta['usuario']['nome']}
-        """
-        print("=" * 100)
-        print(textwrap.dedent(linha))        
-
+            Titular:
+        """        
     
 def main():
     LIMITE_SAQUES = 3

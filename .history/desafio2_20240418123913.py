@@ -99,9 +99,7 @@ def listar_contas(contas):
             C/C:\t\t{conta['numero_conta']}
             Titular:\t{conta['usuario']['nome']}
         """
-        print("=" * 100)
-        print(textwrap.dedent(linha))        
-
+        print        
     
 def main():
     LIMITE_SAQUES = 3

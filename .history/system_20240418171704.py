@@ -9,7 +9,7 @@ def menu():
     [e]\tExtrato
     [nc]\tNova Conta
     [lc]\tListar contas
-    [nu]\tNovo usuário
+    [nc]\tNovo usuário
     [q]\tSair
     => """
     return input(textwrap.dedent(menu))
@@ -148,7 +148,7 @@ def main():
                 contas.append(conta)
                 
         elif opcao == "lc":
-            listar_contas(contas) 
+            listar_contas(conta) 
             
         elif opcao == "q":
             break         

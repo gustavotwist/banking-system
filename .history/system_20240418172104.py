@@ -148,7 +148,7 @@ def main():
                 contas.append(conta)
                 
         elif opcao == "lc":
-            listar_contas(contas) 
+            listar_contas(conta) 
             
         elif opcao == "q":
             break         

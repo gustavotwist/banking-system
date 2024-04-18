@@ -64,18 +64,9 @@ def criar_usuario(usuarios):
     usuario = filtrar_usuario(cpf, usuarios)   
     
     if usuario:
-        print("\n@@@ Já existe usuário com esse CPF! @@@")
-        return
-    
-    nome = input("Informe o nome completo: ")
-    data_nascimento = input("Informe a data de nascimento (dd-mm-aaaa): ")
-    endereco = input("Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): ")
+        print("\n@@@ ")
 
-    usuarios.append({"nome": nome, "data_nascimento": data_nascimento, "cpf": cpf, "endereco": endereco})   
-    
-    print("=== Usuário criado com sucesso! ===")
-    
-    
+       
 def main():
     LIMITE_SAQUES = 3
     AGENCIA = "0001"

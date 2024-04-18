@@ -1,5 +1,7 @@
 import textwrap
 
+from desafio import LIMITE_SAQUES
+
 
 def menu():
     menu = """\n
@@ -53,29 +55,12 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
     
     
 def exibir_extrato(saldo, /, *, extrato):
-    print("\n=============== EXTRATO =================")
+    print("\n=============== EXTRATO ================")
     print("Não foram realizadas movimentações." if not extrato else extrato)
     print(f"\nSaldo:\t\tR$ {saldo:.2f}")
-    print("==========================================")
+    print
 
-
-def criar_usuario(usuarios):
-    cpf = input("Informe o CPF (somente número): ") 
-    usuario = filtrar_usuario(cpf, usuarios)   
-    
-    if usuario:
-        print("\n@@@ Já existe usuário com esse CPF! @@@")
-        return
-    
-    nome = input("Informe o nome completo: ")
-    data_nascimento = input("Informe a data de nascimento (dd-mm-aaaa): ")
-    endereco = input("Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): ")
-
-    usuarios.append({"nome": nome, "data_nascimento": data_nascimento, "cpf": cpf, "endereco": endereco})   
-    
-    print("=== Usuário criado com sucesso! ===")
-    
-    
+       
 def main():
     LIMITE_SAQUES = 3
     AGENCIA = "0001"
